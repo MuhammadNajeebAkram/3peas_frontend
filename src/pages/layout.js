@@ -30,6 +30,8 @@ import DrawerComponent from "@/components/Layout/DrawerComponent";
 const inter = Inter({ subsets: ["latin"] });
 const drawerWidth = 200;
 const navItems = ['Home', 'About', 'Contact'];
+const API_URL = process.env.PUBLIC_API_URL;
+
 
 export default function Layout({ children }) {
   return (
@@ -56,9 +58,41 @@ export default function Layout({ children }) {
           </Toolbar>
         </AppBar>
         {/* Side Panel */}
-        <DrawerComponent />
+        <DrawerComponent responseData={responseData}/>
         <div className="flex-grow p-6 md:overflow-y-auto md:p-12 bg-white">{children}</div>
       </body>
     </html>
   );
+}
+
+export async function getServerSideProps(context) {
+  // Replace with the actual API endpoint URL
+ 
+
+  try {
+    const response = await fetch(API_URL + "getClasses");
+
+    // Check for successful response
+   /* if (!response.ok) {
+      throw new Error(`API request failed with status ${response.status}`);
+    }
+*/
+    const data = await response.json();
+    if (data.success == 1){
+      const responseData = data.response;
+      return { props: { responseData } };
+    }
+    
+
+    // Return the fetched data as props
+    
+  } catch (error) {
+    console.error("Error fetching data:", error);   
+
+
+    // Optionally handle errors gracefully, e.g., redirect to an error page
+    return {
+      notFound: true, // Or redirect to an error page with a specific status code
+    };
+  }
 }
