@@ -1,9 +1,9 @@
 import { useRouter } from 'next/router';
-import BoardButton from '@/components/BoardButton';
 import { Inter } from "next/font/google";
-import { Grid2, Typography, Stack, Button } from "@mui/material";
-import { fontSize } from '@mui/system';
-import LinkPath from '@/components/LinkPath';
+import { Grid2, Button } from "@mui/material";
+import { Box } from '@mui/system';
+
+import Image from 'next/image';
 
 const inter = Inter({ subsets: ["latin"] });
 const API_URL = process.env.PUBLIC_API_URL;
@@ -65,23 +65,7 @@ router.push(`/years/${class_id}?class_name=${class_name}&subject_id=${subject_id
     return (
         <main className={`flex min-h-screen flex-col  ${inter.className}`}>
           
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: 10 }}>
-        <Grid2 container spacing={4}>
-          <Grid2 item style={{ display: 'flex', justifyContent: 'center' }}
-          xs={12}  // Full width on extra-small screens
-          sm={6}   // Two columns on small screens
-          md={4}   // Three columns on medium screens
-          lg={3}   // Four columns on large screens
-          xl={2}   >
-            <Stack variant='contained' sx={{ borderTopLeftRadius: 50, borderBottomRightRadius: 50, 
-              height: 90, width: 250, backgroundColor: '#01411C', alignItems: 'center', justifyContent: 'center' }}>
-              <Typography fontSize={30} color='#fff' textAlign={'center'} justifyItems={'center'} fontWeight={'bold'}>
-                BOARDS
-              </Typography>
-            </Stack>
-          </Grid2>
-        </Grid2>
-      </div>
+          
       
 <div style={{ display: 'flex', justifyContent: 'left' }}>
         <Grid2 container spacing={4} sx={{ marginTop: 5, marginLeft: 0 }}>
@@ -94,12 +78,23 @@ router.push(`/years/${class_id}?class_name=${class_name}&subject_id=${subject_id
       lg={3}   // Four columns on large screens
       xl={2}   // More columns on extra-large screens
       >
-                <div style={{ width: '100%', height: 60, backgroundColor: '#01411C', justifyContent: 'center' }}>
-                
-                <BoardButton text={board.board_name} onClick={() => onClickBoards(board.board_id, board.board_name)}
-                iconName= {board.icon_name} 
-                  />
+                <div style={{ width: '100%', height: 60, backgroundColor: '#fff', justifyContent: 'center' }}>
+                                
+                <Button sx={{textTransform: 'none', color: '#01411C', fontWeight: 'bold', fontSize: 25}}
+                onClick={() => onClickBoards(board.board_id, board.board_name)}>
+                  <Box sx={{display: 'flex'}}>
+                    <Image
+                    src= {`/Icons/boards/${board.icon_name}`} // Replace with your actual path
+                    alt={``}
+                    width={50}  // Adjust the width as needed
+                    height={50} // Adjust the height as needed
+                    style={{ justifyContent: 'flex-start' }} />
 
+                  </Box>
+                  <Box style={{display: 'flex', justifyContent: 'flex-end'}}>
+                    {board.board_name}
+                  </Box>
+                </Button>
                 
                   
                 </div>

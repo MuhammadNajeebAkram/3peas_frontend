@@ -22,7 +22,9 @@ import LinkPath from '@/components/LinkPath'; // Import the Breadcrumb component
 const inter = Inter({ subsets: ["latin"] });
 const drawerWidth = 150;
 const navItems = ["Home", "About", "Contact"];
-const themeBGColor = '#01411C';
+//const themeBGColor = '#01411C';  Flag Green
+const themeBGColor = '#fff';
+const themeBGColorGreen = '#01411C';
 
 
 export default function Layout({ children, class_id, class_name, subject_id, subject_name, board_id, board_name, year, No_Of_Links }) {
@@ -58,21 +60,22 @@ export default function Layout({ children, class_id, class_name, subject_id, sub
         position="fixed"
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
-          ml: { sm: `${drawerWidth}px` }, backgroundColor: '#fff',
+          ml: { sm: `${drawerWidth}px` }, backgroundColor: themeBGColorGreen,
           height: 50
+          
         }}
       >
         <Toolbar>
           <IconButton
-            color="#000"
+            
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={{ mr: 2, display: { sm: 'none' }, color: themeBGColor }}
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h5" sx={{ color: themeBGColor, fontWeight: 'bold', textAlign: 'center' }}>
+          <Typography variant="h4" sx={{ color: themeBGColor, fontWeight: 'bold', textAlign: 'center', alignItems: 'center' }}>
         Pakistan Past Papers
         </Typography>
         </Toolbar>
@@ -87,7 +90,7 @@ export default function Layout({ children, class_id, class_name, subject_id, sub
         }}
       >
 {router.pathname !== '/' && (
-              <LinkPath textColor={'#fff'}
+              <LinkPath textColor={themeBGColorGreen}
                 class_id={class_id}
                 class_name={class_name}
                 subject_id={subject_id}
@@ -121,13 +124,7 @@ export default function Layout({ children, class_id, class_name, subject_id, sub
              },
           }}
         >
-          <Box sx={{marginTop: '60px'}}>
-        <Stack sx={{ backgroundColor: '#fff', height: 50, borderBottomLeftRadius: 20, 
-          alignItems: 'center', marginTop: 5 }}>
-        <Typography sx={{ textAlign: 'center', fontSize: 30, fontWeight: 'bold', textDecoration: 'underline', 
-          color: themeBGColor }}>Class</Typography>
-      </Stack>
-        </Box>
+          
         <div style={{marginTop: 30}}>
         <DrawerComponent />
         </div>
@@ -143,14 +140,8 @@ export default function Layout({ children, class_id, class_name, subject_id, sub
       }}
       open>
         
-        <Box sx={{marginTop: '60px'}}>
-        <Stack sx={{ backgroundColor: '#fff', height: 50, borderBottomLeftRadius: 20, 
-          alignItems: 'center', marginTop: 5 }}>
-        <Typography sx={{ textAlign: 'center', fontSize: 30, fontWeight: 'bold', textDecoration: 'underline', 
-          color: themeBGColor }}>Class</Typography>
-      </Stack>
-        </Box>
-        <div style={{marginTop: 30}}>
+        
+        <div style={{marginTop: 100}}>
         <DrawerComponent />
         </div>
       
@@ -163,7 +154,7 @@ export default function Layout({ children, class_id, class_name, subject_id, sub
       
       <Box
         component="main"
-        sx={{ flexGrow: 1, p: 5, mt: 8, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
+        sx={{ flexGrow: 1, p: 5, mt: 8, width: { sm: `calc(100% - ${drawerWidth}px)` }, backgroundColor: themeBGColorGreen }}
       >
               {children}
             </Box>

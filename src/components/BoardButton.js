@@ -1,8 +1,7 @@
 import React from 'react';
-import {Button, Box} from '@mui/material';
-import { color, textAlign } from '@mui/system';
+import {Button} from '@mui/material';
 import Image from 'next/image';
-import { AlignVerticalCenter } from '@mui/icons-material';
+
 const BoardButton = ({text, fontSize = 25, fontWeight = 'bold', iconName = 'lahore.png', width = 350, 
     fontColor = '#fff', onClick
 }) => {
@@ -11,6 +10,7 @@ const BoardButton = ({text, fontSize = 25, fontWeight = 'bold', iconName = 'laho
         fontSize: fontSize,
         fontWeight: fontWeight,
         color: fontColor,
+        
         
         
     };

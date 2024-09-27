@@ -61,24 +61,6 @@ const onClickYears = (year) => {
 <main className={`flex min-h-screen flex-col  ${inter.className}`}>
 
 
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: 10 }}>
-        <Grid2 container spacing={4}>
-          <Grid2 item style={{ display: 'flex', justifyContent: 'center' }}
-          xs={12}  // Full width on extra-small screens
-          sm={6}   // Two columns on small screens
-          md={4}   // Three columns on medium screens
-          lg={3}   // Four columns on large screens
-          xl={2}   >
-            <Stack variant='contained' sx={{ borderTopLeftRadius: 50, borderBottomRightRadius: 50, 
-              height: 90, width: 250, backgroundColor: '#01411C', alignItems: 'center', justifyContent: 'center' }}>
-              <Typography fontSize={30} color='#fff' textAlign={'center'} justifyItems={'center'} fontWeight={'bold'}>
-                Years
-              </Typography>
-            </Stack>
-          </Grid2>
-        </Grid2>
-      </div>
-
       <div style={{ display: 'flex', justifyContent: 'left' }}>
         <Grid2 container spacing={4} sx={{ marginTop: 5, marginLeft: 0 }}>
           {
@@ -89,10 +71,10 @@ const onClickYears = (year) => {
       md={4}   // Three columns on medium screens
       lg={3}   // Four columns on large screens
       xl={2}   >
-                <div style={{ display: 'flex', width: '100%', height: 50, backgroundColor: '#01411C', justifyContent: 'center' }}>
+                <div style={{ display: 'flex', width: '100%', height: 50, backgroundColor: '#fff', justifyContent: 'center' }}>
                 
                 <Button onClick={() => onClickYears(year.year)} sx={{fontSize: 20, fontWeight: 'bold', 
-                    justifyContent: 'center', textAlign: 'center', color: '#fff'
+                    justifyContent: 'center', textAlign: 'center', color: '#01411C'
                 }}
                  
                   >

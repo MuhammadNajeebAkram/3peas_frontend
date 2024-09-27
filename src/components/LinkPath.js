@@ -92,7 +92,7 @@ const LinkPath = ({ class_id, class_name, subject_id, subject_name, board_id, bo
   ].filter(Boolean);
 
   return (
-    <Breadcrumbs aria-label="breadcrumb" separator="›" sx={{ padding: '10px', fontSize: 16, color: '#fff' }}>
+    <Breadcrumbs aria-label="breadcrumb" separator="›" sx={{ padding: '10px', fontSize: 16, color: '#01411C' }}>
       {links.map((link, index) => {
         const isLast = index === links.length - 1;
         return (

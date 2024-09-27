@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 
 const AppButton = ({ text, variant = 'contained', color = 'primary', size = 'medium', onClick, disabled = false,
-    mainWidth = 200, mainHeight = 50, fontSize = 25, fontColor = '#fff', textAlign = 'center', 
+    mainWidth = 200, mainHeight = 50, fontSize = 25, fontColor = '#01411C', textAlign = 'center', 
     justifyContent = 'center', fontWeight = 'bold', iconName = 'english'
  }) =>
      {
@@ -15,15 +15,17 @@ const AppButton = ({ text, variant = 'contained', color = 'primary', size = 'med
         sx={{
           width: mainWidth,
           height: mainHeight,
-          backgroundColor: '#01411C',
+          backgroundColor: '#fff',
           clipPath: 'polygon(0 0, calc(100% - 20px) 0, 100% 50%, calc(100% - 20px) 100%, 0 100%)',
-          justifyContent: justifyContent
+          justifyContent: justifyContent,
+          textTransform: 'none',
+          borderColor: '#01411C'
           // `polygon` defines the arrow shape
         }}
         variant={variant}
         onClick={onClick}
       >
-        <Typography sx={{fontSize: fontSize, textAlign: textAlign, color: fontColor, fontWeight: fontWeight}}>
+        <Typography sx={{fontSize: fontSize, textAlign: textAlign, color: fontColor, fontWeight: fontWeight, textTransform: 'none'}}>
         {text}
         </Typography>
         
