@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { Inter } from "next/font/google";
-import LinkPath from '@/components/LinkPath';
-import { Grid2, Button } from '@mui/material';
+
+import { Grid2 } from '@mui/material';
 import Image from 'next/image';
 import { useEffect } from 'react';
 
@@ -78,7 +78,7 @@ useEffect(() => {
                 <div style={{ justifyContent: 'center' }}>
                 
                 <Image src={`${AWS_Paper}${paper.paper_path}`} 
-                alt="Description of the image"
+                alt={paper.paper_name}
                 width={2000}
                 height={2000}
                  
