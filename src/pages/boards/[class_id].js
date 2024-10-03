@@ -80,7 +80,7 @@ router.push(`/years/${class_id}?class_name=${class_name}&subject_id=${subject_id
       >
                 <div style={{ width: '100%', height: 60, backgroundColor: '#fff', justifyContent: 'center' }}>
                                 
-                <Button sx={{textTransform: 'none', color: '#01411C', fontWeight: 'bold', fontSize: 25}}
+                <Button sx={{textTransform: 'none', color: '#01411C', fontWeight: 'bold', fontSize: 20}}
                 onClick={() => onClickBoards(board.board_id, board.board_name)}>
                   <Box sx={{display: 'flex'}}>
                     <Image

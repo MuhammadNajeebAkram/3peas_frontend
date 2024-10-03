@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 
 const AppButton = ({ text, variant = 'contained', color = 'primary', size = 'medium', onClick, disabled = false,
-    mainWidth = 200, mainHeight = 50, fontSize = 25, fontColor = '#01411C', textAlign = 'center', 
+    mainWidth = 200, mainHeight = 50, fontSize = 18, fontColor = '#01411C', textAlign = 'center', 
     justifyContent = 'center', fontWeight = 'bold', iconName = 'english'
  }) =>
      {
@@ -14,6 +14,7 @@ const AppButton = ({ text, variant = 'contained', color = 'primary', size = 'med
       <Button
         sx={{
           width: mainWidth,
+          minWidth: '100px',
           height: mainHeight,
           backgroundColor: '#fff',
           clipPath: 'polygon(0 0, calc(100% - 20px) 0, 100% 50%, calc(100% - 20px) 100%, 0 100%)',

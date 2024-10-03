@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 export default function DrawerComponent() {
   const router = useRouter();
   const [navItems, setNavItems] = useState([]);
-  const API_URL = 'http://localhost:8000/api/';
+  const API_URL = 'https://api.pakistanpastpapers.com/api/';
   // const API_URL = process.env.NEXT_PUBLIC_API_URL;
   const listItems = [
     { id: 1, name: "9th Class" },

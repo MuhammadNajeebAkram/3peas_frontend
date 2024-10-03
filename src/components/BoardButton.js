@@ -2,7 +2,7 @@ import React from 'react';
 import {Button} from '@mui/material';
 import Image from 'next/image';
 
-const BoardButton = ({text, fontSize = 25, fontWeight = 'bold', iconName = 'lahore.png', width = 350, 
+const BoardButton = ({text, fontSize = 18, fontWeight = 'bold', iconName = 'lahore.png', width = 350, 
     fontColor = '#fff', onClick
 }) => {
 
