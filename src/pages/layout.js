@@ -15,6 +15,7 @@ import DrawerComponent from "@/components/Layout/DrawerComponent";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import LinkPath from '@/components/LinkPath'; // Import the Breadcrumb component
+import Image from "next/image";
 
 
 const API_URL = process.env.PUBLIC_API_URL;
@@ -125,8 +126,8 @@ export default function Layout({ children, class_id, class_name, subject_id, sub
           }}
         >
           <Box sx={{height: '100px', width: drawerWidth, alignItems: 'center', alignContent: 'center'}}>
-        <img src="/logo.webp" alt="Logo" style={{ height: '80%', width: 'auto', marginLeft: 40 }} />
-        </Box>
+          <Image src="/logo.webp" alt="Logo" width= "100" height = "40" style={{marginLeft: 20}}  />
+                </Box>
         <div style={{marginTop: 0}}>
         <DrawerComponent />
         </div>
@@ -142,7 +143,7 @@ export default function Layout({ children, class_id, class_name, subject_id, sub
       }}
       open>
         <Box sx={{height: '100px', width: drawerWidth, alignItems: 'center', alignContent: 'center'}}>
-        <img src="/logo.webp" alt="Logo" style={{ height: '80%', width: 'auto', marginLeft: 40 }} />
+        <Image src="/logo.webp" alt="Logo" width= "100" height = "40" style={{marginLeft: 20}}  />
         </Box>
         
         <div style={{marginTop: 0}}>
