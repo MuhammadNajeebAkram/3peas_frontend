@@ -9,7 +9,7 @@ export default function DrawerComponent() {
   const router = useRouter();
   const [navItems, setNavItems] = useState([]);
   const API_URL = 'http://localhost:8000/api/';
-  //const API_URL = process.env.NEXT_PUBLIC_API_URL;
+  // const API_URL = process.env.NEXT_PUBLIC_API_URL;
   const listItems = [
     { id: 1, name: "9th Class" },
     { id: 2, name: "10th Class" },
@@ -18,10 +18,12 @@ export default function DrawerComponent() {
   ];
 
   useEffect(() => {
+    
     getClasses();
   }, []);
 
 const getClasses = () => {
+  console.log(API_URL);
 fetch(`${API_URL}classes`, {
           method: 'GET',
           

@@ -18,6 +18,7 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import LinkPath from '@/components/LinkPath'; // Import the Breadcrumb component
 
+const API_URL = process.env.PUBLIC_API_URL;
 
 const inter = Inter({ subsets: ["latin"] });
 const drawerWidth = 150;

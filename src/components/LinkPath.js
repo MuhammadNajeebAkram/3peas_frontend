@@ -85,6 +85,7 @@ const LinkPath = ({ class_id, class_name, subject_id, subject_name, board_id, bo
 
   // Define the breadcrumb paths based on the props passed
   const links = [
+    { label: "Home", path: "/" },
     { label: class_name, path: `/subjects/${class_id}?class_name=${class_name}` },
     No_Of_Links > 1 && { label: subject_name, path: `/boards/${class_id}?class_name=${class_name}&subject_id=${subject_id}&subject_name=${subject_name}` },
     No_Of_Links > 2 && { label: board_name, path: `/years/${class_id}?class_name=${class_name}&subject_id=${subject_id}&subject_name=${subject_name}&board_id=${board_id}&board_name=${board_name}` },
