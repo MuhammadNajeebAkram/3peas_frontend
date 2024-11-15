@@ -61,7 +61,14 @@ useEffect(() => {
   });
 }, []);
     return (
+      <>
+      <head>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9476597782320237"
+     crossorigin="anonymous"></script>
+      </head>
+      
 <main className={`flex min-h-screen flex-col  ${inter.className}`}>
+
 {/*
   <div style={{ display: 'flex', justifyContent: 'left' }}>
         <LinkPath class_id = {class_id} class_name = {class_name} subject_id = {subject_id} subject_name = {subject_name} board_id = {board_id} board_name = {board_name} year = {year} No_Of_Links = {4} />
@@ -96,7 +103,7 @@ useEffect(() => {
       </div>
 
 </main>
-
+</>
     );
 };
 export default PaperPage;
