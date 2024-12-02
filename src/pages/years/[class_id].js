@@ -72,10 +72,10 @@ const onClickYears = (year) => {
             years.map((year) => (
              
 
-             <Grid2 size = {{ xs: 12, sm: 4 }}>
- <div style={{ display: 'flex', width: '100%', height: 50, backgroundColor: '#fff', justifyContent: 'center' }}>
+             <Grid2 key={year.year} size = {{ xs: 12, sm: 4 }}>
+ <div  style={{ display: 'flex', width: '100%', height: 50, backgroundColor: '#fff', justifyContent: 'center' }}>
                 
-                <Button onClick={() => onClickYears(year.year)} sx={{fontSize: 20, fontWeight: 'bold', 
+                <Button key={year.year} onClick={() => onClickYears(year.year)} sx={{fontSize: 20, fontWeight: 'bold', 
                     justifyContent: 'center', textAlign: 'center', color: '#01411C'
                 }}
                  
