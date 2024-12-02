@@ -21,8 +21,7 @@ export default function App({ Component, pageProps }) {
             `,
           }}
         />
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9476597782320237"
-     crossorigin="anonymous"></script>
+
     </Head>
 
   <Layout class_id={pageProps.class_id} class_name={pageProps.class_name} subject_id = {pageProps.subject_id}
