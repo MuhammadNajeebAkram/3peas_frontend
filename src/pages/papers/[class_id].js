@@ -63,11 +63,14 @@ useEffect(() => {
     return (
       <>
       <head>
+       
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9476597782320237"
      crossorigin="anonymous"></script>
       </head>
       
 <main className={`flex min-h-screen flex-col  ${inter.className}`}>
+
+ 
 
 {/*
   <div style={{ display: 'flex', justifyContent: 'left' }}>

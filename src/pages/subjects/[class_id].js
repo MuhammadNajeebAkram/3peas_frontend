@@ -72,12 +72,16 @@ router.push(`/boards/${class_id}?class_name=${class_name}&subject_id=${subject_i
   return (
     <>
      <head>
+      
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9476597782320237"
      crossorigin="anonymous"></script>
       </head>
+
+      
     <div
       className={`flex min-h-screen flex-col  ${inter.className}`}
     >
+       
 {/* <div style={{ display: 'flex', justifyContent: 'left', marginTop: 0 }}>
         
           <LinkPath class_id = {class_id} class_name = {class_name} No_Of_Links = {1} />      

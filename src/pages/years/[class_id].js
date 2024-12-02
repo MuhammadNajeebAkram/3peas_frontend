@@ -60,23 +60,25 @@ const onClickYears = (year) => {
     return (
       <>
      <head>
+     
+
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9476597782320237"
      crossorigin="anonymous"></script>
       </head>
 <main className={`flex min-h-screen flex-col  ${inter.className}`}>
 
-
-      <div style={{ display: 'flex', justifyContent: 'left' }}>
-        <Grid2 container spacing={4} sx={{ marginTop: 5, marginLeft: 0 }}>
+ 
+        <Grid2 container spacing={4} sx={{ marginTop: 5, marginLeft: 0 }}
+        
+        >
+        
           {
+             
             years.map((year) => (
-              <Grid2 item key={year.year}
-              xs={12}  // Full width on extra-small screens
-      sm={6}   // Two columns on small screens
-      md={4}   // Three columns on medium screens
-      lg={3}   // Four columns on large screens
-      xl={2}   >
-                <div style={{ display: 'flex', width: '100%', height: 50, backgroundColor: '#fff', justifyContent: 'center' }}>
+             
+
+             <Grid2 size = {{ xs: 12, sm: 4 }}>
+ <div style={{ display: 'flex', width: '100%', height: 50, backgroundColor: '#fff', justifyContent: 'center' }}>
                 
                 <Button onClick={() => onClickYears(year.year)} sx={{fontSize: 20, fontWeight: 'bold', 
                     justifyContent: 'center', textAlign: 'center', color: '#01411C'
@@ -90,11 +92,14 @@ const onClickYears = (year) => {
                   
                 </div>
               </Grid2>
+               
+                
             ))
-              
+            
           }
-        </Grid2>
-      </div>
+          </Grid2> 
+        
+      {/*</div>*/}
     </main>
 
     </>

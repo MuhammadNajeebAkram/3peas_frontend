@@ -16,11 +16,13 @@
     "@mui/material": "^6.0.1",
     "@mui/styles": "^6.0.1",
     "@mui/system": "^6.0.1",
+    "dompurify": "^3.2.2",
     "next": "^14.2.7",
     "next-sitemap": "^4.2.3",
     "prop-types": "^15.8.1",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-router-dom": "^7.0.1"
   },
   "devDependencies": {
     "eslint": "^8",
