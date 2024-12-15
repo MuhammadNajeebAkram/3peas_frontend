@@ -33,7 +33,7 @@ export const FirstNewsSet = (props) => {
     <>
     <Grid container id = "grid1stNews"  
     size = {{xs: 12}} 
-    sx={{paddingTop: '20px'}}>
+    sx={{paddingTop: '20px', display: "flex", flexDirection: "column"}}>
     <Link component="button" onClick={() => onClickNewsLink(props.news[0].slug)}>
     {
       Array.isArray(topNewsImages) && (
@@ -63,8 +63,10 @@ export const FirstNewsSet = (props) => {
         {props.news[0].title}
 
         </Grid>
-    <Grid className = {props.news[0].language === 0 ? 'urdu-font-main-description' : 'english-font-main-description'}>
-          {props.news[0].description}
+    <Grid className = {props.news[0].language === 0 ? 'urdu-font-main-description' : 'english-font-main-description'}
+    sx={{marginTop : '15px'}}
+    >
+          {props.news[0].description} 
         </Grid>
 
     </Link>
@@ -97,7 +99,7 @@ export const FirstNewsSet = (props) => {
       {/* ------------------------------------------ */}
 
 <Grid container id = "grid2ndNews"  
-size = {{xs: 12}} className={props.news[1].language === 0 ? "urdu-font" : "english-font"}
+size = {{xs: 12}} 
 sx={{display: "flex", flexDirection: "column", paddingTop: "20px"}}>
   {
     props.news.length > 1 && (
@@ -111,7 +113,8 @@ sx={{display: "flex", flexDirection: "column", paddingTop: "20px"}}>
                 <Grid className = {props.news[1].language === 0 ? 'urdu-font-main-title' : 'english-font-main-title'}>
                 {props.news[1].title}
                  </Grid>
-                 <Grid className = {props.news[1].language === 0 ? 'urdu-font-main-description' : 'english-font-main-description'}>
+                 <Grid sx={{marginTop : '15px'}}
+                 className = {props.news[1].language === 0 ? 'urdu-font-main-description' : 'english-font-main-description'}>
                 {props.news[1].description}
                  </Grid>
               </Link>

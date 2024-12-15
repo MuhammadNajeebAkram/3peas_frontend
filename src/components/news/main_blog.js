@@ -43,7 +43,8 @@ export const MainBlog = (props) => {
 
                     </Grid>
 
-                    <Grid id = "blogDescriptionGrid" className = {props.blog[0].language === 0 ? 'urdu-font-main-description' : 'english-font-main-description'}>
+                    <Grid id = "blogDescriptionGrid" sx={{marginTop : '15px'}}
+                    className = {props.blog[0].language === 0 ? 'urdu-font-main-description' : 'english-font-main-description'}>
                     {props.blog[0].description}
 
                     </Grid>

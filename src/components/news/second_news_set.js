@@ -37,7 +37,7 @@ export const SecondNewsSet = (props) => {
                     {news.title}
 
                 </Grid>   
-                <Grid id = 'newsDescriptionGrid'
+                <Grid id = 'newsDescriptionGrid' sx={{marginTop : '15px'}}
                 className = {news.language === 0 ? 'urdu-font-main-description' : 'english-font-main-description'}
                 >
                     {news.description}
