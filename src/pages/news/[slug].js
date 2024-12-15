@@ -72,11 +72,11 @@ const NewsPage = ({news, news_files}) => {
 
             <Grid container justifyContent={'center'} spacing={4}>
                 <Grid spacing={10} size = {8}>
-                    <Grid sx={{marginBottom: 6}}>
-                    <Typography className = {news[0].language == 0 ? 'urdu-font-main-title' : 'english-font-main-title'} 
-                    sx={{color: '#fff', fontSize: '16pt', fontWeight: 'bold', textAlign: 'center'}}>
+                    <Grid className = {news[0].language == 0 ? 'urdu-font-main-title' : 'english-font-main-title'}
+                    sx={{marginBottom: 5}}>
+                    
                     {news[0].title}
-                    </Typography>
+                   
                           
                             
                     </Grid>
