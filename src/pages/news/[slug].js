@@ -63,7 +63,7 @@ const NewsPage = ({news, news_files}) => {
      
 <Head>
 
-        <meta name="description" content={news[0].description} />
+        <meta name="description" content={news[0].meta_description} />
         
 </Head>
 
@@ -73,7 +73,7 @@ const NewsPage = ({news, news_files}) => {
             <Grid container justifyContent={'center'} spacing={4}>
                 <Grid spacing={10} size = {8}>
                     <Grid sx={{marginBottom: 6}}>
-                    <Typography className = {news[0].language == 0 ? 'urdu-font' : 'english-font'} 
+                    <Typography className = {news[0].language == 0 ? 'urdu-font-main-title' : 'english-font-main-title'} 
                     sx={{color: '#fff', fontSize: '16pt', fontWeight: 'bold', textAlign: 'center'}}>
                     {news[0].title}
                     </Typography>
@@ -82,8 +82,8 @@ const NewsPage = ({news, news_files}) => {
                     </Grid>
                           
                         
-                   <div className={news[0].language == 0 ? 'urdu-font-12' : 'english-font-12'} 
-                   dangerouslySetInnerHTML={{ __html: sanitizedHtml }} style={{color: '#fff'}} />
+                   <div className={news[0].language == 0 ? 'urdu-font-main-content' : 'english-font-main-content'} 
+                   dangerouslySetInnerHTML={{ __html: sanitizedHtml }}  />
                    <div style={{textAlign: 'right'}}>
                     {
                       news_files?.map((file, index) => (                        

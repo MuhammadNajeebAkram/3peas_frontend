@@ -117,3 +117,22 @@ body {
   color: #ff4;
 }
 
+.urdu-font-main-content {
+  font-family: "Noto Nastaliq Urdu", serif;
+  font-size: 14px;
+  font-weight: normal;
+  direction: rtl;
+  text-align: right;
+  color: #ff4;
+  line-height: 2.5;
+  margin-bottom: 10px;
+}
+
+.english-font-main-content {
+  font-family: "Roboto Serif", serif;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: left;
+  color: #ff4;
+}
+
