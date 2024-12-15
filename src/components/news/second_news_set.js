@@ -26,7 +26,7 @@ export const SecondNewsSet = (props) => {
                 <>
                 {
                     props.news.map((news) => (
-                    <Grid container sx={{display: "flex", flexDirection: "column", marginBottom: '5px'}}>
+                    <Grid key = {news.id} container sx={{display: "flex", flexDirection: "column", marginBottom: '5px'}}>
                     <Link
                 component={'button'}                    
                 onClick={() => onClickNewsLink(news.slug)}
