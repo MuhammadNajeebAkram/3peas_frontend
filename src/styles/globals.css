@@ -31,3 +31,89 @@ body {
     text-wrap: balance;
   }
 }
+
+.english-font {
+  font-family: 'Arial', serif;
+  color: #fff;
+  direction: rtl; /* For right-to-left languages */
+}
+
+.english-font-12 {
+  font-family: 'Arial', serif;
+  font-size: 12;
+  color: #fff;
+  
+}
+
+.urdu-font {
+  font-family: "Noto Nastaliq Urdu", serif;
+  font-optical-sizing: auto;  
+  font-style: normal;
+  font-size: 14;
+  direction: rtl; /* For right-to-left languages */
+  color: #fff;
+  
+}
+
+.urdu-font-12 {
+  font-family: "Noto Nastaliq Urdu", serif;
+  font-optical-sizing: auto;  
+  font-style: normal;
+  font-size: 12;
+  direction: rtl; /* For right-to-left languages */
+  color: #fff;
+  
+}
+
+.english-font-main-title {
+  font-family: "Roboto Serif", serif;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+  color: #ff4;
+}
+
+.english-font-main-description {
+  font-family: "Roboto Serif", serif;
+  font-size: 16px;
+  font-weight: normal;
+  text-align: left;
+  color: #ff4;
+}
+
+.english-font-main-date {
+  font-family: "Roboto Serif", serif;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: left;
+  color: #ff4;
+}
+
+.urdu-font-main-title {
+  font-family: "Noto Nastaliq Urdu", serif;
+  font-size: 16px;
+  font-weight: bold;
+  direction: rtl;
+  text-align: right;
+  color: #ff4;
+  
+}
+
+.urdu-font-main-description {
+  font-family: "Noto Nastaliq Urdu", serif;
+  font-size: 14px;
+  font-weight: normal;
+  direction: rtl;
+  text-align: right;
+  color: #ff4;
+}
+
+.urdu-font-main-date {
+  font-family: "Noto Nastaliq Urdu", serif;
+  font-size: 12px;
+  font-weight: normal;
+  direction: rtl;
+  text-align: right;
+  color: #ff4;
+}
+
