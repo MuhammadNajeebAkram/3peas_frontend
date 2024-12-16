@@ -31,6 +31,14 @@ body {
     text-wrap: balance;
   }
 }
+@font-face {
+  font-family: 'Roboto Serif';
+  src: url('/fonts/RobotoSerif.ttf');
+}
+@font-face {
+  font-family: 'Noto Nastaliq Urdu';
+  src: url('/fonts/NotoNastaliqUrdu.ttf');
+}
 
 .english-font {
   font-family: 'Arial', serif;

@@ -21,9 +21,9 @@ export default function Document() {
 `
 }}
   />
-     
-    
-
+     {/*
+     <style>{`@import url(&apos;https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400&family=Roboto+Serif:ital,wght@0,1;opsz,wght@8..144,100..900&display=swap&apos;);`}</style>
+*/}
 
 
      
